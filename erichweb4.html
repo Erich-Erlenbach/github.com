@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Эрих Эрлэнбах | Поэт, писатель, философ, композитор</title>
+    <meta name="description" content="Официальный сайт Эриха Эрлэнбаха: поэзия, проза, симфоническая музыка, философские притчи. Книги на ЛитРес, Amazon, музыка на всех стримингах.">
+    <meta name="keywords" content="Эрих Эрлэнбах, поэт, писатель, композитор, философ, книги, музыка, симфонии, стихи, проза">
+    <meta name="author" content="Эрих Эрлэнбах">
+    <meta property="og:title" content="Эрих Эрлэнбах — Эхо Небесной Гармонии">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Синтез слова, звука и мысли. Поэзия, проза, академическая и современная музыка.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0A0C10/C5A028?text=Erich+Erlenbach">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0A0C10;
+            color: #E8E2D4;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .logo, .nav-links a, .hero-subtitle, .quote-text, .card-title, .section-subhead {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            border-left: 4px solid #C5A028;
+            padding-left: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* header & nav */
+        header {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(197, 160, 40, 0.2);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 12, 16, 0.92);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .logo p {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: #C5A028;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: #E8E2D4;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: #C5A028;
+        }
+
+        /* hero */
+        .hero {
+            padding: 5rem 0 4rem;
+            text-align: center;
+            background: radial-gradient(circle at 30% 10%, #14181f, #0A0C10);
+        }
+        .hero-quote {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            font-size: 1.7rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            color: #f0e9db;
+        }
+        .hero-author {
+            font-size: 3.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+        .hero-titles {
+            font-size: 1.3rem;
+            color: #C5A028;
+            margin-bottom: 2rem;
+        }
+        .btn-group {
+            display: flex;
+            gap: 1.2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: transparent;
+            border: 1.5px solid #C5A028;
+            padding: 0.8rem 2rem;
+            color: #E8E2D4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.25s;
+            border-radius: 40px;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background: #C5A028;
+            color: #0A0C10;
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #d9b43c;
+            transform: translateY(-2px);
+        }
+        .btn-outline:hover {
+            background: rgba(197, 160, 40, 0.1);
+            border-color: #e0b84d;
+        }
+
+        /* cards grids */
+        .grid-2, .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: #111418;
+            border-radius: 24px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(197, 160, 40, 0.2);
+        }
+        .card:hover {
+            border-color: #C5A028;
+            transform: translateY(-5px);
+        }
+        .card i {
+            font-size: 2.2rem;
+            color: #C5A028;
+            margin-bottom: 1rem;
+        }
+        .card-title {
+            font-size: 1.7rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .platform-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+        .platform-icon {
+            background: #1e2329;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #E8E2D4;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        .platform-icon i, .platform-icon span {
+            font-size: 1rem;
+        }
+        .platform-icon:hover {
+            background: #C5A028;
+            color: #0A0C10;
+        }
+
+        .music-embed {
+            background: #0f1217;
+            border-radius: 28px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .separator {
+            width: 80px;
+            height: 2px;
+            background: #C5A028;
+            margin: 1.5rem 0;
+        }
+
+        /* contact block */
+        .contact-block {
+            background: linear-gradient(135deg, #111418 0%, #0c0f14 100%);
+            border-radius: 28px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            border: 1px solid rgba(197, 160, 40, 0.3);
+        }
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #1e2329;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #E8E2D4;
+            transition: all 0.2s;
+            border: 1px solid rgba(197, 160, 40, 0.4);
+        }
+        .contact-email i {
+            font-size: 1.4rem;
+            color: #C5A028;
+        }
+        .contact-email:hover {
+            background: #C5A028;
+            color: #0A0C10;
+            border-color: #C5A028;
+        }
+        .contact-email:hover i {
+            color: #0A0C10;
+        }
+
+        footer {
+            background: #06080c;
+            padding: 3rem 0 2rem;
+            margin-top: 3rem;
+            text-align: center;
+            border-top: 1px solid rgba(197,160,40,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 0 1.2rem; }
+            h2 { font-size: 2rem; }
+            .hero-author { font-size: 2.4rem; }
+            .hero-quote { font-size: 1.2rem; }
+            .contact-email { font-size: 1rem; padding: 0.6rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <h1>Эрих Эрлэнбах</h1>
+            <p>поэт · писатель · философ · композитор</p>
+        </div>
+        <div class="nav-links">
+            <a href="#about">Обо мне</a>
+            <a href="#literature">Литература</a>
+            <a href="#music">Музыка</a>
+            <a href="#platforms">Площадки</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-quote">«Всё, что обретает форму в звуке, в рифме или в прозе, есть лишь земное эхо Небесной гармонии»</div>
+        <div class="hero-author">Эрих Эрлэнбах</div>
+        <div class="hero-titles">Единое творческое полотно: Поэзия, Проза, Музыка</div>
+        <div class="btn-group">
+            <a href="#music" class="btn btn-primary"><i class="fas fa-headphones"></i> Слушать музыку</a>
+            <a href="#literature" class="btn btn-outline"><i class="fas fa-book"></i> Читать книги</a>
+            <a href="#about" class="btn btn-outline"><i class="fas fa-user"></i> Биография</a>
+        </div>
+    </div>
+</section>
+
+<main>
+    <!-- Биография + философия (скорректированный текст) -->
+    <section id="about" class="container" style="padding: 3rem 0;">
+        <h2>Многоголосие жизни</h2>
+        <div class="grid-2">
+            <div class="card">
+                <i class="fas fa-globe-europe"></i>
+                <div class="card-title">Корни & «итальянский дворик»</div>
+                <p>Родился в 1962 году в Тбилиси, в семье оперных артистов. В его родословной переплелись семь наций и три религии; корни семьи уходят в Вюртемберг, Тбилиси, Баку, Санкт-Петербург, Ереван, Хрюг и к немцам Поволжья. С детства впитал дух многоконфессионального Тбилиси, где бок о бок жили лютеране, католики, православные, мусульмане, иудеи и езиды. Этот опыт стал фундаментом диалога культур в его творчестве.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chess-queen"></i>
+                <div class="card-title">Путь & образование</div>
+                <p>Музыкальная школа, шахматная школа, хореографическое училище, конный спорт, сётокан, архитектурные проекты. В 17 лет поступил в Тбилисское высшее артиллерийское командное училище. Служба более 40 лет. Женат, двое детей, внук. Все грани жизни преломились в симфониях и притчах.</p>
+            </div>
+        </div>
+        <div class="card" style="margin: 1rem 0;">
+            <i class="fas fa-feather-alt"></i>
+            <div class="card-title">Философия творчества</div>
+            <p>«Музыка, стих и проза — три грани единого откровения. Всё созданное — реализация замысла, дарованного свыше для преображения мира». Сочетаю слово и звук, исследую вечные вопросы через притчи, библейские сюжеты, квантовую физику и шахматные стратегии. Более 50 лет литературного и музыкального труда.</p>
+            <div class="separator"></div>
+            <p><em>«Верю, что искусство и мысль могут менять мир. Моя цель — говорить на языке, затрагивающем разум и сердце».</em></p>
+        </div>
+    </section>
+
+    <!-- Литературное наследие: книги, порталы -->
+    <section id="literature" class="container" style="padding: 2rem 0 3rem;">
+        <h2>Литературное наследие</h2>
+        <div class="grid-2">
+            <div class="card">
+                <i class="fas fa-book-open"></i>
+                <div class="card-title">Поэзия и проза</div>
+                <p>Стихи, поэмы, саги (рус., нем., груз.), философские притчи, детектив, фантастика, сказки. Издано <strong>16 книг</strong>, более 20 в черновиках. Общий объём перепечатанных листов — около 2000 стр. А4. В поэзии — космогония, квантовая физика, шахматы; в прозе — человеческая природа и судьбы цивилизаций.</p>
+                <div class="platform-grid">
+                    <a href="http://stihi.ru/avtor/sheridan2" target="_blank" class="platform-icon"><i class="fas fa-pen-fancy"></i> Стихи.ру (71)</a>
+                    <a href="https://proza.ru/avtor/sheridan1" target="_blank" class="platform-icon"><i class="fas fa-paragraph"></i> Проза.ру (70)</a>
+                    <a href="https://www.litres.ru/book/erich-erlenbach/za-granu-muzeynyh-sten-72682354/" target="_blank" class="platform-icon"><i class="fas fa-store"></i> ЛитРес</a>
+                    <a href="https://www.amazon.com/s?k=Erich+Erlenbach" target="_blank" class="platform-icon"><i class="fab fa-amazon"></i> Amazon Books</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-gem"></i>
+                <div class="card-title">Книгоиздание и переводы</div>
+                <p>Переводы исторических книг с нем., арм., азерб., груз. языков. Официальные псевдонимы, ISNI: <strong>0000 0005 2738 1605</strong> и <strong>0000 0005 2738 1621</strong>. Свидетельства РЦИС: 1374-173-780, 1767-067-747, 0614-421-108. Член Российского союза писателей с декабря 2025.</p>
+                <div class="platform-grid">
+                    <a href="https://www.litres.ru/author/erich-erlenbach/" target="_blank" class="platform-icon"><i class="fas fa-book"></i> Все книги на ЛитРес</a>
+                    <a href="https://www.livelib.ru/author/16916926-erih-erlenbah" target="_blank" class="platform-icon"><i class="fas fa-users"></i> LiveLib</a>
+                    <a href="https://books.google.com/search?q=Erich+Erlenbach" target="_blank" class="platform-icon"><i class="fab fa-google"></i> Google Books</a>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 0.5rem;">
+            <i class="fas fa-microphone-alt"></i>
+            <div class="card-title">Авторские каналы и подкасты</div>
+            <div class="platform-grid">
+                <a href="https://www.youtube.com/@ErichErlenbach" target="_blank" class="platform-icon"><i class="fab fa-youtube"></i> YouTube (61 видео)</a>
+                <a href="https://rutube.ru/u/2e/" target="_blank" class="platform-icon"><i class="fas fa-video"></i> RuTube (65 произведений)</a>
+                <a href="https://t.me/ErichErlenbach" target="_blank" class="platform-icon"><i class="fab fa-telegram"></i> Telegram-канал</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- МУЗЫКА: симфонии, стриминг, платформы -->
+    <section id="music" class="container" style="padding: 1rem 0 3rem;">
+        <h2>Архитектура звука</h2>
+        <div class="grid-2">
+            <div class="card">
+                <i class="fas fa-music"></i>
+                <div class="card-title">Академический монументализм</div>
+                <p>Симфонии, органные произведения, кантаты, инструментальные циклы. Композитор-полистилист: от ренессанса и барокко до EDM. Свободное перемещение между жанрами — диалог эпох. Песни для оперных партий на русском, французском, английском, немецком.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-headphones-alt"></i>
+                <div class="card-title">Слушать везде</div>
+                <p>Музыка доступна на всех мировых стримингах. Сотни произведений, включая симфонические сюиты, поп, фолк, электронные обработки. Ниже — прямые ссылки на официальные релизы.</p>
+                <div class="platform-grid" style="margin-top: 1rem;">
+                    <a href="https://music.amazon.com/artists/B0DJV1CJ2T/erich-erlenbach" target="_blank" class="platform-icon"><i class="fab fa-amazon"></i> Amazon Music</a>
+                    <a href="https://music.apple.com/ru/artist/erich-erlenbach/1774600102" target="_blank" class="platform-icon"><i class="fab fa-apple"></i> Apple Music</a>
+                    <a href="https://music.yandex.ru/artist/20533199" target="_blank" class="platform-icon"><i class="fab fa-yandex"></i> Яндекс Музыка</a>
+                    <a href="https://open.spotify.com/artist/6NkXxEVPjzX5emG98IFHsP" target="_blank" class="platform-icon"><i class="fab fa-spotify"></i> Spotify</a>
+                    <a href="https://vk.com/music/artist/erich-erlenbach" target="_blank" class="platform-icon"><i class="fab fa-vk"></i> VK Музыка</a>
+                </div>
+            </div>
+        </div>
+        <!-- Прямая интеграция youtube / rutube примеры -->
+        <div class="music-embed">
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: space-between;">
+                <span><i class="fab fa-youtube" style="color:#C5A028;"></i> <strong>Авторский канал на YouTube</strong> — симфонии, песни, поэзия под музыку</span>
+                <a href="https://www.youtube.com/@ErichErlenbach" target="_blank" class="btn btn-outline" style="padding: 0.4rem 1.2rem;">Перейти <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="music-embed">
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; justify-content: space-between;">
+                <span><i class="fas fa-record-vinyl"></i> <strong>RuTube канал</strong> — эксклюзивные видео и музыкальные циклы</span>
+                <a href="https://rutube.ru/u/2e/" target="_blank" class="btn btn-outline" style="padding: 0.4rem 1.2rem;">Смотреть</a>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 1rem;">
+            <div class="card-title">Музыкальные альбомы и синглы</div>
+            <p>Крупные оркестровые формы, органные прелюдии, вокальные циклы. Композитор объединяет классическую традицию с современными ритмами. Все треки защищены авторским правом (РЦИС, ISNI).</p>
+            <div class="platform-grid">
+                <a href="https://music.yandex.ru/artist/20533199/tracks" target="_blank" class="platform-icon"><i class="fab fa-yandex"></i> Треки на Яндекс.Музыке</a>
+                <a href="https://open.spotify.com/artist/6NkXxEVPjzX5emG98IFHsP" target="_blank" class="platform-icon"><i class="fab fa-spotify"></i> Spotify discography</a>
+                <a href="https://music.amazon.com/artists/B0DJV1CJ2T" target="_blank" class="platform-icon"><i class="fab fa-amazon"></i> Amazon Music</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ВСЕ ПЛАТФОРМЫ И ДОКУМЕНТЫ (мультиссылки) -->
+    <section id="platforms" class="container" style="padding: 2rem 0 3rem;">
+        <h2>Все цифровые пространства</h2>
+        <div class="grid-3">
+            <div class="card">
+                <i class="fas fa-music"></i>
+                <div class="card-title">Стриминг & аудио</div>
+                <div class="platform-grid" style="flex-direction: column; align-items: flex-start;">
+                    <a href="https://music.amazon.com/artists/B0DJV1CJ2T" target="_blank">🎵 Amazon Music</a>
+                    <a href="https://music.apple.com/ru/artist/erich-erlenbach/1774600102" target="_blank">🎧 Apple Music</a>
+                    <a href="https://music.yandex.ru/artist/20533199" target="_blank">📀 Яндекс Музыка</a>
+                    <a href="https://open.spotify.com/artist/6NkXxEVPjzX5emG98IFHsP" target="_blank">🎶 Spotify</a>
+                    <a href="https://vk.com/music/artist/erich-erlenbach" target="_blank">📻 VK Музыка</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-book"></i>
+                <div class="card-title">Книги и тексты</div>
+                <div class="platform-grid" style="flex-direction: column; align-items: flex-start;">
+                    <a href="https://www.litres.ru/author/erich-erlenbach/" target="_blank">📚 ЛитРес</a>
+                    <a href="https://www.amazon.com/s?k=Erich+Erlenbach" target="_blank">📖 Amazon Books</a>
+                    <a href="https://books.google.com/search?q=Erich+Erlenbach" target="_blank">🔍 Google Books</a>
+                    <a href="http://stihi.ru/avtor/sheridan2" target="_blank">✍️ Стихи.ру</a>
+                    <a href="https://proza.ru/avtor/sheridan1" target="_blank">📝 Проза.ру</a>
+                    <a href="https://www.livelib.ru/author/16916926-erih-erlenbah" target="_blank">📌 LiveLib</a>
+                </div>
+            </div>
+            <div class="card">
+                <i class="fas fa-video"></i>
+                <div class="card-title">Видео & соцсети</div>
+                <div class="platform-grid" style="flex-direction: column; align-items: flex-start;">
+                    <a href="https://www.youtube.com/@ErichErlenbach" target="_blank">▶️ YouTube канал</a>
+                    <a href="https://rutube.ru/u/2e/" target="_blank">📽️ RuTube</a>
+                    <a href="https://t.me/ErichErlenbach" target="_blank">💬 Telegram</a>
+                </div>
+                <div class="separator" style="margin: 1rem 0;"></div>
+                <div><i class="fas fa-certificate"></i> Официальные рег. номера:<br> ISNI: 0000 0005 2738 1605, 0000 0005 2738 1621<br> РЦИС: 1374-173-780, 1767-067-747, 0614-421-108</div>
+            </div>
+        </div>
+        <div class="card" style="margin-top: 1rem; text-align: center;">
+            <i class="fas fa-globe"></i> <strong>Единый метапроект</strong> — более 50 лет созидания. Свидетельства о депонировании: 248-741-598, 620-918-633. Член Российского союза писателей с 2025.
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ (email добавлен) -->
+    <section id="contacts" class="container" style="padding: 1rem 0 3rem;">
+        <h2>Связь со мной</h2>
+        <div class="contact-block">
+            <i class="fas fa-envelope" style="font-size: 2.5rem; color: #C5A028; margin-bottom: 1rem; display: inline-block;"></i>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Для вопросов о сотрудничестве, издании книг, музыкальных проектах и творческих встречах:</p>
+            <a href="mailto:tbilisi.mtacminda@gmail.com" class="contact-email">
+                <i class="fas fa-envelope"></i> tbilisi.mtacminda@gmail.com
+            </a>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">Отвечаю на письма лично, ценю каждое обращение.</p>
+        </div>
+        <!-- дополнительная карточка с другими соцсетями для связи -->
+        <div class="grid-2" style="margin-top: 1rem;">
+            <div class="card" style="text-align: center;">
+                <i class="fab fa-telegram"></i>
+                <div class="card-title">Telegram</div>
+                <p>Подписывайтесь на авторский канал, там публикуются новые стихи, музыкальные наброски и анонсы.</p>
+                <a href="https://t.me/ErichErlenbach" target="_blank" class="btn btn-outline" style="margin-top: 1rem; display: inline-block;">Перейти в Telegram</a>
+            </div>
+            <div class="card" style="text-align: center;">
+                <i class="fab fa-youtube"></i>
+                <div class="card-title">YouTube</div>
+                <p>Видеоверсии симфоний, поэтические перформансы, записи концертов и новые песни.</p>
+                <a href="https://www.youtube.com/@ErichErlenbach" target="_blank" class="btn btn-outline" style="margin-top: 1rem; display: inline-block;">Смотреть на YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- цитата итоговая -->
+    <section class="container" style="padding: 2rem 0; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto; border-top: 1px solid rgba(197,160,40,0.3); padding-top: 2rem;">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: #C5A028; opacity: 0.6;"></i>
+            <p style="font-size: 1.3rem; font-family: 'Cormorant Garamond', serif; margin: 1rem 0;">«Соединяю слово и звук, чтобы исследовать вечные вопросы и делиться открытиями. Поэт, писатель, философ, композитор — это не профессии, а способы познания жизни».</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© Эрих Эрлэнбах — поэзия, проза, музыка. Все права защищены.</p>
+        <p style="margin-top: 0.5rem;">✉️ <a href="mailto:tbilisi.mtacminda@gmail.com" style="color: #C5A028; text-decoration: none;">tbilisi.mtacminda@gmail.com</a></p>
+        <p style="margin-top: 0.8rem; font-size: 0.85rem;">Творчество доступно по всему миру: книги на Amazon, ЛитРес, музыка на всех стриминговых платформах.</p>
+        <div class="platform-grid" style="justify-content: center; margin-top: 1.5rem;">
+            <span><i class="fab fa-youtube"></i> YouTube</span>
+            <span><i class="fab fa-spotify"></i> Spotify</span>
+            <span><i class="fab fa-apple"></i> Apple Music</span>
+            <span><i class="fab fa-amazon"></i> Amazon</span>
+            <span><i class="fab fa-yandex"></i> Яндекс Музыка</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
